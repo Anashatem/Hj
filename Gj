@@ -1,0 +1,168 @@
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Window = Fluent:CreateWindow({
+	Title = "team New Discover",
+	SubTitle = "mm2 | V2",
+	TabWidth = 160,
+	Size = UDim2.fromOffset(580, 460),
+	Acrylic = false,
+	Theme = "Dark",
+	MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Admins = Window:AddTab({
+	Title = "القائمة الاوله",
+	Icon = "rbxassetid://7733960981",
+})
+
+Admins:AddButton({
+	Title = " YouTube",
+	Description = "",
+	Callback = function()
+		setclipboard("https://www.youtube.com/@Anas_Gaming88782")
+	end
+})
+
+Admins:AddButton({
+	Title = "Telegram",
+	Description = "",
+	Callback = function()
+		setclipboard("https://t.me/Scriptsroblod")
+	end
+})
+Admins:AddButton({
+	Title = "Roblox",
+	Description = "",
+	Callback = function()
+		setclipboard("https://www.roblox.com/users/3333777497/profile")
+	end
+})
+local Admins = Window:AddTab({
+	Title = "تنقل",
+	Icon = "rbxassetid://7734032056",
+})
+Admins:AddButton({
+	Title = "تنقل الي الوبي",
+	Description = "تنقل الى الوبي",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Spawns.Spawn.CFrame
+	end
+})
+
+local Admins = Window:AddTab({
+	Title = "مميز",
+	Icon = "rbxassetid://7733960981",
+})
+
+
+Admins:AddButton({
+	Title = "كشف القاتل و الشرف",
+	Description = "",
+	Callback = function()
+		local function getRoleColor(plr) if (plr.Backpack:FindFirstChild("Knife") or plr.Character:FindFirstChild("Knife")) then return Color3.new(255, 0, 0) elseif (plr.Backpack:FindFirstChild("Gun") or plr.Character:FindFirstChild("Gun")) then return Color3.new(0, 0, 255) else return Color3.new(0, 255, 0) end end while true do for _, v in pairs(game.Players:GetChildren()) do if v ~= game.Players.LocalPlayer and v.Character and not v.Character:FindFirstChild("Highlight") then Instance.new("Highlight", v.Character) v.Character.Highlight.FillTransparency = 0.5 v.Character.Highlight.OutlineTransparency = 0.5 v.Character.Highlight.FillColor = getRoleColor(v) elseif (v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Highlight")) then v.Character.Highlight.FillColor = getRoleColor(v) end end wait(0.1) end
+	end
+})
+
+Admins:AddButton({
+	Title = "عدم الموت",
+	Description = "",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+
+if player.Character then
+
+if player.Character:FindFirstChild("Humanoid") then
+
+player.Character.Humanoid.Name = "100000"
+
+end
+
+local l = player.Character["97"]:Clone()
+
+l.Parent = player.Character
+
+l.Name = "Humanoid"; wait(0.20)
+
+player.Character["97"]:Destroy()
+
+workspace.CurrentCamera.CameraSubject = player.Character.Humanoid
+
+player.Character.Animate.Disabled = true; wait(0.1)
+
+player.Character.Animate.Disabled = false
+
+end
+
+print("finished.")
+	end
+})
+
+   
+   local Admins = Window:AddTab({
+	Title = "مميزات قوية ",
+	Icon = "rbxassetid://7734053426",
+})
+
+
+Admins:AddButton({
+	Title = "مشيات",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+	end
+})
+   
+   Admins:AddButton({
+	Title = "تجميع بيض",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/EGGmm2"))()
+	end
+})
+   
+   Admins:AddButton({
+	Title = "طيران**",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+	end
+})
+
+Admins:AddButton({
+	Title = "قتل ",
+	Description = "",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+	end
+})
+
+   local Admins = Window:AddTab({
+	Title = "الاعب",
+	Icon = "rbxassetid://7734053426",
+})
+
+Admins:AddButton({
+	Title = "سرعة",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/0m52kRnj"))()
+	end
+})
+
+Admins:AddButton({
+	Title = "jamp",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Anashatem/Nj/main/Ghg"))()
+	end
+})
+
+Admins:AddButton({
+	Title = "jamp",
+	Description = "",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Anashatem/Nj/main/Ghg"))()
+	end
+})
